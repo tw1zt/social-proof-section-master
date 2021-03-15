@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+:root {
+  --very-Dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --Dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  font-family: "Spartan", sans-serif;
+  text-align: center;
+  background-image: url(images/bg-pattern-top-mobile.svg),
+    url(images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom right;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  padding-right: 1rem;
+}
+
+.header {
+  margin-top: 3.2rem;
+}
+
+.header h1 {
+  color: var(--very-Dark-magenta);
+  font-weight: 700;
+}
+
+.header p {
+  opacity: 0.5;
+  margin: 2rem 0;
+}
+
+p {
+  line-height: 1.3rem;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.rate {
+  background-color: var(--light-grayish-magenta);
+  color: var(--very-Dark-magenta);
+  margin: 1rem 0;
+  border-radius: 5px;
+  height: 5rem;
+}
+
+.stars {
+  margin-top: 1rem;
+}
+
+.stars img {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.reviews {
+  margin-top: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--very-Dark-magenta);
+  color: var(--white);
+  margin: 5px;
+  border-radius: 8px;
+  text-align: left;
+  margin: 1rem auto;
+}
+
+span {
+  color: var(--soft-pink);
+  font-weight: 400;
+}
+.card img {
+  border-radius: 50%;
+  height: 50px;
+  margin-right: 1rem;
+}
+
+@media (min-width: 600px) {
+  body {
+    font-family: "Spartan", sans-serif;
+    text-align: center;
+    background-image: url(images/bg-pattern-top-desktop.svg),
+      url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    height: 100vh;
+    width: 100vw;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .header {
+    text-align: left;
+    width: 50vw;
+    max-width: 430px;
+    margin-left: 13vw;
+    margin-top: 4.5rem;
+    font-size: 1.5rem;
+  }
+
+  .ratings {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+    margin-top: 5rem;
+    margin-left: 13rem;
+  }
+  .rate:nth-child(2) {
+    margin-left: 3rem;
+  }
+  .rate:nth-child(3) {
+    margin-left: 6rem;
+  }
+
+  .rate {
+    display: flex;
+    align-items: center;
+    width: 450px;
+    height: 3rem;
+    padding-left: 2rem;
+  }
+
+  .rate p {
+    margin-left: 1.5rem;
+  }
+
+  .stars {
+    margin-top: 0;
+  }
+
+  .reviews {
+    display: flex;
+    align-items: center;
+    margin: 0 auto 2.5rem;
+  }
+
+  .card {
+    height: 235px;
+    width: 350px;
+    margin: 1rem;
+  }
+
+  .card:nth-child(1) {
+    align-self: flex-start;
+  }
+
+  .card:nth-child(3) {
+    align-self: flex-end;
+  }
+}
